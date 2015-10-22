@@ -1,5 +1,5 @@
 
-package calculator;
+package calculadora;
 
 /**
  *
@@ -14,13 +14,13 @@ public class Calculadora {
     }
     
     //Resta de dos números
-    public int restar(int pNum1, int pNum2)
+    public static int restar(int pNum1, int pNum2)
     {
         return pNum1 - pNum2;
     }
     
     //División de dos números: Devuelve el valor truncado
-    public int dividirEntero(int pNum1, int pNum2)
+    public static int dividirEntero(int pNum1, int pNum2)
     {
         if (pNum2 == 0)
         {
@@ -30,7 +30,7 @@ public class Calculadora {
     }
     
     //División de dos números: Devuelve el resultado decimal
-    public double dividirReal(int pNum1, int pNum2)
+    public static double dividirReal(int pNum1, int pNum2)
     {
         if (pNum2 == 0)
         {

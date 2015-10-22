@@ -1,4 +1,4 @@
-package calculator;
+package calculadora;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -6,6 +6,7 @@ package calculator;
  * and open the template in the editor.
  */
 
+import calculadora.Calculadora;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -41,14 +42,31 @@ public class SumRestTest {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     @Test
-    public void TestSumPass()
+    public void testSumaPass()
     {
         assertEquals("Error en sumar()", 3, Calculadora.sumar(1,2));
+        assertEquals("Error en sumar()", 75, Calculadora.sumar(63,12));
+        assertEquals("Error en sumar()", 100, Calculadora.sumar(50,50));
     }
     
     @Test
-    public void TestSumFallo()
+    public void testSumaFallo()
     {
         assertEquals("Error en sumar()", 45, Calculadora.sumar(1, 2));
+        assertEquals("Error en sumar()", 1, Calculadora.sumar(100, 21));
+    }
+    
+    @Test
+    public void testRestaPass()
+    {
+        assertEquals("error in restar()",  1, Calculadora.restar(2, 1));
+        assertEquals("error in restar()", -1, Calculadora.restar(-2, -1));
+        assertEquals("error in restar()",  0, Calculadora.restar(2, 2));
+    }
+    
+    @Test
+    public void testRestaFallo()
+    {
+        assertEquals("error in restar()",  1, Calculadora.restar(2, 2));
     }
 }
